@@ -25,17 +25,31 @@ The dataset includes the following fields:
 The CreateProductDbFromJSON package aims to create a relational database and load a json file in three table:
 
 * **Product**
-    **ProductId
-  * * PId
-    *
-    * * Name][Price][Category][SubCategory][Brand][CrawledAt][Description][OutOfStock][Url](Includes:_id, pid, title, original_price, brand, crawled_at,description,out_of_stock,url)
-* ProductDetails(Included: _id,Key,Value)
-* ProductImages
+    * ProductId
+    * PId
+    * Name
+    * Price
+    * Category
+    * SubCategory
+    * Brand
+    * CrawledAt
+    * Description
+    * OutOfStock
+    * Url
+* **ProductDetails**
+    * ProductId
+    * KeyName
+    * KeyValue
+* **ProductImages**
+    * ProductId
+    * ImageURL
 The SSIS project reads the JSON file, parses its contents, and loads the data into the ProductDB database. The data is organized into the above-mentioned tables to maintain relational integrity and facilitate efficient querying.
 
-Dependencies
-SQL Server: The project requires a SQL Server instance to create and populate the ProductDB database.
-Newtonsoft.Json: The Newtonsoft.Json library is used for deserializing the JSON file.
+# Dependencies
+   * SQL Server: The project requires a SQL Server instance to create and populate the ProductDB database.
+   * Visual Studio
+   * Sql Server Integration Service
+   * Newtonsoft.Json: The Newtonsoft.Json library is used for deserializing the JSON file.
 Usage
 Ensure that you have SQL Server installed and running.
 Create a new database named ProductDB in your SQL Server instance.
