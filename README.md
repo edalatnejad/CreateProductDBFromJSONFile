@@ -51,15 +51,14 @@ The SSIS project reads the JSON file, parses its contents, and loads the data in
    * SQL Server Data Tools (SSDT)
    * Visual Studio & VSTA
    * Sql Server Integration Service
-   * Newtonsoft.Json library 
-Usage
+   * Newtonsoft.Json library
+     
+#  Setting up and Running SSIS Package
 Ensure that you have SQL Server installed and running.
-Create a new database named ProductDB in your SQL Server instance.
-Execute the SQL scripts provided in the SSIS project to create the required tables (Product, ProductDetails, ProductImages) in the ProductDB database.
+Create a new database named ProductDB in your SQL Server instance usin * Create database ProductDB 
+All tables and keys will be created in the SSIS package.
 Open the CreateProductDbFromJSON solution in Visual Studio or SSDT (SQL Server Data Tools).
-Configure the SSIS package to point to the JSON file location and specify the SQL Server connection details.
+Configure the SSIS package to point to the JSON file location and specify the SQL Server connection details using variable tab.
 Run the SSIS package to populate the ProductDB database with data from the JSON file.
-License
-This project is licensed under the MIT License.
 
 Feel free to explore, modify, and utilize the SSIS package according to your requirements. If you encounter any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Your contributions are highly appreciated!
